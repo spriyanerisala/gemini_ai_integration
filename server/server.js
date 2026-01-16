@@ -17,7 +17,7 @@ app.use('/api/ai',aiRoutes); //http://localhost:5001/api/ai/ask
 app.get('/',(req,res)=>{
     res.send("Gemini Ai working successfully");
 })
-
-app.listen(process.env.PORT,()=>{
-    console.log("Server is running ");
+const port =process.env.PORT;
+app.listen(,(port)=>{
+    console.log(`Server is running on the port  : ${port}`);
 })
